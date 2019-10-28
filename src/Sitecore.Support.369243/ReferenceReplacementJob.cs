@@ -40,7 +40,7 @@
         /// <param name="source">Item object</param>
         /// <param name="copy">Item object</param>
         public ReferenceReplacementJob(Item source, Item copy)
-            : this(source, copy, deep: true, null)
+            : this(source, copy, true, null)
         {
             Assert.ArgumentNotNull(source, "source");
             Assert.ArgumentNotNull(copy, "copy");
@@ -75,7 +75,7 @@
         /// <param name="sourceId">Source ID</param>
         /// <param name="copyId">Copy ID</param>
         public ReferenceReplacementJob(Database database, string sourceId, string copyId)
-            : this(database, sourceId, copyId, deep: true, null)
+            : this(database, sourceId, copyId, true, null)
         {
             Assert.ArgumentNotNull(database, "database");
             Assert.ArgumentNotNull(sourceId, "sourceId");
