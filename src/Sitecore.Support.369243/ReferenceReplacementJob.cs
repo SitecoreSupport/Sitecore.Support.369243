@@ -147,7 +147,10 @@
                 Item item = Database.GetItem(copy.SourceUri);
                 if (item != null)
                 {
+                    if (!mapOriginalAndClonedItems.ContainsKey(item.ID))
+                    {
                         mapOriginalAndClonedItems.Add(item.ID, copy.ID);
+                    }
                 }
             }
             if (deep)
